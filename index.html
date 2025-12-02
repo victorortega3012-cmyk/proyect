@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Consentimiento en las Relaciones</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -16,11 +16,14 @@
       --gray-text: #333;
     }
 
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background: var(--white);
       color: var(--gray-text);
+      line-height: 1.6;
     }
 
     .topbar {
@@ -36,11 +39,12 @@
     header {
       background: var(--white);
       border-bottom: 1px solid #ddd;
-      padding: 20px 30px;
+      padding: 15px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     header .title {
@@ -49,67 +53,29 @@
       font-weight: 700;
     }
 
-    header .btn-group {
-      margin-left: auto;
-      display: flex;
-      gap: 15px;
-    }
-
-    .btn {
-      display: inline-block;
-      background: var(--violet-red);
-      color: var(--white);
-      padding: 10px 22px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: background-color 0.3s ease;
-      cursor: pointer;
-      border: none;
-    }
-
-    .btn:hover,
-    .btn:focus {
-      background: var(--blue-light);
-      color: var(--white);
-      outline: none;
-    }
-
     .hero {
       background: linear-gradient(90deg, var(--blue-light), var(--blue-dark));
-      padding: 80px 20px;
-      clip-path: polygon(0 0, 100% 0, 100% 80%, 0 95%);
+      padding: 60px 20px;
       text-align: center;
+      color: var(--white);
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0 95%);
     }
 
     .hero h1 {
       margin: 0;
-      color: var(--white);
-      font-size: 2.8rem;
+      font-size: 2.5rem;
       font-weight: 700;
     }
 
     .container {
       max-width: 900px;
-      margin: 70px auto;
+      margin: 50px auto;
       padding: 0 20px;
     }
 
-    h2 {
-      color: var(--blue-dark);
-      margin-top: 60px;
-    }
+    h2 { color: var(--blue-dark); margin-top: 50px; }
 
-    p,
-    li {
-      font-size: 1.1rem;
-      line-height: 1.8;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
+    ul { padding-left: 20px; }
 
     .quote {
       border-left: 4px solid var(--violet-red);
@@ -120,8 +86,7 @@
       color: var(--blue-dark);
     }
 
-    .myth-box,
-    .reality-box {
+    .myth-box, .reality-box {
       padding: 18px 20px;
       margin: 15px 0;
       border-radius: 6px;
@@ -154,24 +119,29 @@
       color: var(--blue-dark);
     }
 
-    footer a:hover {
-      text-decoration: underline;
+    footer a:hover { text-decoration: underline; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .container { padding: 0 15px; margin: 40px auto; }
     }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 1.7rem; }
+    }
+
   </style>
 </head>
 
 <body>
   <div class="topbar">
-    <div>Linea de ayuda Nacional | 📞 800 624 64 64</div>
+    <div>📞 800 624 64 64</div>
     <div></div>
   </div>
 
   <header>
     <div class="title">Consentimiento</div>
-    <div class="btn-group">
-      <a href="#mitos" class="btn">Ir a Mitos</a>
-      <a href="formulario.html" class="btn">Unirte</a>
-    </div>
   </header>
 
   <section class="hero">
@@ -216,7 +186,6 @@
     <div class="reality-box"><strong>REALIDAD:</strong> Solo un “sí” claro determina el consentimiento.</div>
 
     <h2>Tipos de consentimiento</h2>
-
     <ul>
       <li><strong>Expreso:</strong> se comunica con palabras claras.</li>
       <li><strong>Implícito:</strong> acciones mutuamente entendidas y sin duda.</li>
@@ -226,8 +195,9 @@
   </div>
 
   <footer>
-    <p>2025 | Todos los derechos reservados &copy; | relaciones sanas y consentimiento. si ves esto, hola 👻</p>
+    <p>2025 | Todos los derechos reservados &copy; | relaciones sanas y consentimiento.</p>
     <p><a href="#">Volver arriba</a></p>
   </footer>
 </body>
 </html>
+
